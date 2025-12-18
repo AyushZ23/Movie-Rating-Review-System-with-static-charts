@@ -1,0 +1,413 @@
+/**
+ * Custom Stylesheet for Movie Rating & Review System
+ * Enhances Bootstrap 5 with custom styling
+ * 
+ * @author Senior PHP Developer
+ * @date December 17, 2025
+ */
+
+/* ===================================
+   Global Styles
+   =================================== */
+
+:root {
+    --primary-color: #0d6efd;
+    --secondary-color: #6c757d;
+    --success-color: #198754;
+    --danger-color: #dc3545;
+    --warning-color: #ffc107;
+    --info-color: #0dcaf0;
+    --dark-color: #212529;
+    --light-color: #f8f9fa;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5f7fa;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Make footer stick to bottom */
+.container {
+    flex: 1;
+}
+
+/* ===================================
+   Navigation Bar Enhancements
+   =================================== */
+
+.navbar {
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.navbar-brand {
+    font-weight: 600;
+    font-size: 1.3rem;
+    transition: transform 0.2s;
+}
+
+.navbar-brand:hover {
+    transform: scale(1.05);
+}
+
+.nav-link {
+    transition: all 0.3s ease;
+    border-radius: 5px;
+    margin: 0 5px;
+}
+
+.nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.nav-link.active {
+    background-color: rgba(255, 255, 255, 0.2);
+    font-weight: 500;
+}
+
+/* ===================================
+   Card Enhancements
+   =================================== */
+
+.card {
+    border: none;
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    margin-bottom: 20px;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15) !important;
+}
+
+.card-header {
+    border-radius: 10px 10px 0 0 !important;
+    padding: 15px 20px;
+    font-weight: 600;
+}
+
+.card-body {
+    padding: 25px;
+}
+
+/* ===================================
+   Table Enhancements
+   =================================== */
+
+.table {
+    margin-bottom: 0;
+}
+
+.table thead th {
+    border-bottom: 2px solid #dee2e6;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
+    font-weight: 600;
+}
+
+.table tbody tr {
+    transition: all 0.2s;
+}
+
+.table tbody tr:hover {
+    background-color: #f8f9fa;
+    transform: scale(1.01);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* ===================================
+   Button Enhancements
+   =================================== */
+
+.btn {
+    border-radius: 6px;
+    font-weight: 500;
+    padding: 8px 16px;
+    transition: all 0.3s ease;
+    border: none;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.btn-success {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+}
+
+.btn-warning {
+    background: linear-gradient(135deg, #ffd89b 0%, #19547b 100%);
+}
+
+.btn-danger {
+    background: linear-gradient(135deg, #ff6b6b 0%, #c92a2a 100%);
+}
+
+.btn-group-sm .btn {
+    padding: 4px 8px;
+    font-size: 0.875rem;
+}
+
+/* ===================================
+   Form Enhancements
+   =================================== */
+
+.form-control,
+.form-select {
+    border-radius: 6px;
+    border: 2px solid #e9ecef;
+    padding: 10px 15px;
+    transition: all 0.3s;
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.15);
+    transform: scale(1.01);
+}
+
+.form-label {
+    font-weight: 600;
+    color: var(--dark-color);
+    margin-bottom: 8px;
+}
+
+.form-text {
+    font-size: 0.85rem;
+    color: #6c757d;
+}
+
+.is-invalid {
+    border-color: var(--danger-color) !important;
+}
+
+/* ===================================
+   Rating Input Styling
+   =================================== */
+
+.rating-input {
+    display: flex;
+    gap: 15px;
+    padding: 10px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+}
+
+.rating-input .form-check {
+    margin: 0;
+}
+
+.rating-input .form-check-input:checked + .form-check-label {
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.rating-input .form-check-label {
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.rating-input .form-check-label:hover {
+    transform: scale(1.1);
+}
+
+/* ===================================
+   Alert Enhancements
+   =================================== */
+
+.alert {
+    border-radius: 8px;
+    border: none;
+    padding: 15px 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.alert-success {
+    background: linear-gradient(135deg, #d4fc79 0%, #96e6a1 100%);
+    color: #155724;
+}
+
+.alert-danger {
+    background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+    color: #721c24;
+}
+
+.alert-info {
+    background: linear-gradient(135deg, #a1c4fd 0%, #c2e9fb 100%);
+    color: #004085;
+}
+
+/* ===================================
+   Badge Enhancements
+   =================================== */
+
+.badge {
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-weight: 500;
+}
+
+/* ===================================
+   Star Rating Display
+   =================================== */
+
+.bi-star-fill.text-warning {
+    color: #ffc107 !important;
+    filter: drop-shadow(0 1px 2px rgba(255, 193, 7, 0.5));
+}
+
+.bi-star.text-muted {
+    color: #dee2e6 !important;
+}
+
+/* ===================================
+   Charts Container
+   =================================== */
+
+canvas {
+    max-height: 300px;
+}
+
+/* ===================================
+   Footer Styling
+   =================================== */
+
+footer {
+    margin-top: auto;
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+/* ===================================
+   Page Header Styling
+   =================================== */
+
+.display-4 {
+    font-weight: 700;
+    color: var(--dark-color);
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+
+.lead {
+    font-size: 1.15rem;
+}
+
+/* ===================================
+   Breadcrumb Styling
+   =================================== */
+
+.breadcrumb {
+    background-color: transparent;
+    padding: 0;
+    margin: 0;
+}
+
+.breadcrumb-item a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.breadcrumb-item a:hover {
+    color: var(--dark-color);
+    text-decoration: underline;
+}
+
+/* ===================================
+   Loading Animation
+   =================================== */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.card {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* ===================================
+   Responsive Design
+   =================================== */
+
+@media (max-width: 768px) {
+    .btn-group-sm .btn {
+        padding: 3px 6px;
+        font-size: 0.75rem;
+    }
+    
+    .table {
+        font-size: 0.85rem;
+    }
+    
+    .card-body {
+        padding: 15px;
+    }
+    
+    .rating-input {
+        flex-direction: column;
+        gap: 8px;
+    }
+    
+    .display-4 {
+        font-size: 2rem;
+    }
+}
+
+/* ===================================
+   Scrollbar Styling (Webkit browsers)
+   =================================== */
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* ===================================
+   Print Styles
+   =================================== */
+
+@media print {
+    .navbar,
+    .btn,
+    footer,
+    .breadcrumb {
+        display: none;
+    }
+    
+    .card {
+        box-shadow: none;
+        border: 1px solid #ddd;
+    }
+}
